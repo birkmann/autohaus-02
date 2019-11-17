@@ -1,0 +1,319 @@
+body {
+	margin: 0;
+	font: 16px/1.6em sans-serif;
+	color: #333;
+	background: #000;
+}
+
+@media (min-width: 1600px) {
+	body {
+		font: 17px/1.6em sans-serif;
+	}
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.img-r {
+	max-width: 100%;
+	height: auto;
+}
+
+.center {
+	text-align: center;
+}
+
+.preload * {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-ms-transition: none !important;
+	-o-transition: none !important;
+}
+
+.container {
+	padding: 0 15px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+header.main {
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #111;
+}
+
+header.main .container {
+	display: flex;
+}
+
+header.main .logo {
+	text-decoration: none;
+	font-size: 1.7em;
+	color: #fff;
+	display: inline-block;
+	padding: 12px 20px;
+	border-radius: 0 0 2px 2px;
+	font-weight: bold;
+	font-style: italic;
+	line-height: 35px;
+}
+
+header.main .logo img {
+	width: 40px;
+	height: auto;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: -10px;
+}
+
+header.main .menu-toggle {
+	margin-left: auto;
+	color: #aaa;
+	line-height: 60px;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+nav.main {
+	position: fixed;
+	z-index: 2;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: #000;
+	background: rgb(0,0,0,0.9);
+	background: #2B2E2E;
+	background: rgba(20,20,20,0.98);
+	transform: translateY(-100%);
+	transition: all 0.35s ease-in-out;
+}
+
+body.open nav.main {
+	transform: translateY(0);
+}
+
+nav.main .row {
+	display: flex;
+}
+
+nav.main .row .col {
+	width: 33%;
+	text-align: center;
+	padding-top: 150px;
+	margin: 0 50px;
+}
+
+nav.main a {
+	display: block;
+	color: #aaa;
+	text-decoration: none;
+	font-size: 1.5em;
+	line-height: 2.5em;
+	transition: all 0.25s ease-in-out;
+}
+
+nav.main a:hover {
+	color: #fff;
+}
+
+nav.main a:first-child {
+	font-family: 'Georgia', serif;
+	color: #666;
+	font-style: italic;
+	margin-bottom: 10px;
+	font-size: 2.2em;
+	line-height: 2em;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.burger {
+	margin-top: 10px;
+	margin-right: 5px;
+	height: 30px;
+	padding: 0px;
+	margin-left: auto;
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.burger__1,
+.burger__2,
+.burger__3 {
+	height: 2px;
+	width: 30px;
+	background: #fff;
+	content: "";
+	display: block;
+	position: relative;
+	transition: all 0.25s ease-in-out;
+}
+
+.burger__1 { top: 0; }
+.burger__2 { top: 5px; }
+.burger__3 { top: 10px; }
+
+.burger__2 {
+
+}
+
+body.open .burger__1 {
+	transform: translateY(7px) rotate(45deg);
+}
+
+body.open .burger__2 {
+	opacity: 0;
+}
+
+body.open .burger__3 {
+	transform: translateY(-7px) rotate(-45deg);
+}
+
+.emotion {
+	height: 100vh;
+	min-height: 600px;
+	width: 100%;
+	position: relative;
+}
+
+/*
+.emotion:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 250px;
+	z-index: 1;
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+}
+*/
+
+.emotion .bg {
+	background-image: url("https://media0.faz.net/ppmedia/aktuell/technik-motor/motor/fahrberichte/217544377/1.5130430/default-retina/der-opel-insignia-grand-sport.jpg");
+	background-image: url("https://images.opel.customers.sevenval.com/opelvis/images/2020A/0J/47/turn/GDX/RV1/all/04/image.jpg");
+	background-image: url("https://www.autohausdaehn.de/wp-content/uploads/opel_insignia_ct_exterior_21x9_ins19_e02_125.jpg");
+	background-image: url("https://www.autohausdaehn.de/wp-content/uploads/Opel_Insignia_Exclusive_21x9_ins19_e03_023.jpg");
+	top: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 100px black;
+    transition: opacity .5s ease-in-out;
+}
+
+.emotion .text {
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	color: #fff;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.emotion .text h2 {
+	font-size: 4em;
+	line-height: 1em;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.emotion .text h3 {
+	font-size: 2em;
+	line-height: 1em;
+	margin: 0;
+}
+
+.intro .row {
+	display: flex;
+}
+
+.intro .col {
+	width: calc(100%/3);
+	color: #fff;
+	position: relative;
+	height: 35vh;
+	overflow: hidden;
+}
+
+.intro .col:hover .bg {
+	transform: scale(1.1);
+}
+
+.intro .col .bg {
+	background-image: url("https://media0.faz.net/ppmedia/aktuell/technik-motor/motor/fahrberichte/217544377/1.5130430/default-retina/der-opel-insignia-grand-sport.jpg");
+	background-image: url("https://images.opel.customers.sevenval.com/opelvis/images/2020A/0J/47/turn/GDX/RV1/all/04/image.jpg");
+	top: 0;
+	left: 0;
+    width: 100%;
+ 	height: 35vh;
+    background-position: right center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 100px black;
+    position: absolute;
+    z-index: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.intro .col:nth-child(1) .bg {
+	background-image: url("https://i.computer-bild.de/imgs/1/1/5/9/3/0/2/3/Opel-Corsa-e-658x370-12db0e2db21033ff.jpg");
+}
+
+.intro .col:nth-child(2) .bg {
+	background-image: url("http://www.leasingexpert.sk/photogallery/1754/3031.jpg");
+}
+
+.intro .col:nth-child(3) .bg {
+	background-image: url("https://www.opel.de/content/dam/opel/master/vehicles/Grandland-X/my_2000_phev/16x9/opel_grandland_x_exterior_16x9_gr20_e03_100.jpg?imwidth=631");
+}
+
+.intro .col .text {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
+	transform: translateY(55%);
+	transition: all 0.3s ease-in-out;
+}
+
+.intro .col .text:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 250px;
+	z-index: 0;
+	background: linear-gradient(to top, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+}
+
+.intro .col:hover .text {
+	transform: translateY(0%);	
+}
+
+.intro .col .text h2 {
+	margin: 0 0 10px;
+}
+
+.intro .col .text p {
+	margin: 0;
+}
+
+.intro .col .text .inside {
+	position: relative;
+	z-index: 1;
+	padding: 20px;
+}
