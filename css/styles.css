@@ -39,7 +39,6 @@ body {
 	margin: 0 auto;
 }
 
-
 header.main {
 	position: fixed;
 	z-index: 100;
@@ -51,6 +50,7 @@ header.main {
 
 header.main .container {
 	display: flex;
+	max-width: 100%;
 }
 
 header.main .logo {
