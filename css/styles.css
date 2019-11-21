@@ -199,10 +199,7 @@ body.open .burger__3 {
 */
 
 .emotion .bg {
-	background-image: url("https://media0.faz.net/ppmedia/aktuell/technik-motor/motor/fahrberichte/217544377/1.5130430/default-retina/der-opel-insignia-grand-sport.jpg");
-	background-image: url("https://images.opel.customers.sevenval.com/opelvis/images/2020A/0J/47/turn/GDX/RV1/all/04/image.jpg");
-	background-image: url("https://www.autohausdaehn.de/wp-content/uploads/opel_insignia_ct_exterior_21x9_ins19_e02_125.jpg");
-	background-image: url("https://www.autohausdaehn.de/wp-content/uploads/Opel_Insignia_Exclusive_21x9_ins19_e03_023.jpg");
+	background-image: url("https://images.pexels.com/photos/241316/pexels-photo-241316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 	top: 0;
     width: 100%;
     height: 100vh;
@@ -268,15 +265,15 @@ body.open .burger__3 {
 }
 
 .intro .col:nth-child(1) .bg {
-	background-image: url("https://i.computer-bild.de/imgs/1/1/5/9/3/0/2/3/Opel-Corsa-e-658x370-12db0e2db21033ff.jpg");
+	background-image: url("https://images.pexels.com/photos/241316/pexels-photo-241316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .intro .col:nth-child(2) .bg {
-	background-image: url("http://www.leasingexpert.sk/photogallery/1754/3031.jpg");
+	background-image: url("https://images.pexels.com/photos/241316/pexels-photo-241316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .intro .col:nth-child(3) .bg {
-	background-image: url("https://www.opel.de/content/dam/opel/master/vehicles/Grandland-X/my_2000_phev/16x9/opel_grandland_x_exterior_16x9_gr20_e03_100.jpg?imwidth=631");
+	background-image: url("https://images.pexels.com/photos/241316/pexels-photo-241316.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
 }
 
 .intro .col .text {
