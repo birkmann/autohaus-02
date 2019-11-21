@@ -48,9 +48,14 @@ header.main {
 	top: 0;
 	left: 0;
 	width: 100%;
-	padding: 20px;
 	background: #fff;
 	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+@media (min-width: 1600px) {
+	header.main {
+		padding: 20px;
+	}
 }
 
 header.main * {
@@ -64,10 +69,10 @@ header.main .container {
 
 header.main .logo {
 	text-decoration: none;
-	font-size: 1.7em;
+	font-size: 18px;
 	color: rgb(0, 30, 80);
 	display: inline-block;
-	padding: 12px 20px;
+	padding: 12px 0px;
 	border-radius: 0 0 2px 2px;
 	line-height: 35px;
 	font-weight: bold;
@@ -75,7 +80,7 @@ header.main .logo {
 }
 
 header.main .logo img {
-    width: 38px;
+    width: 28px;
     height: auto;
     display: inline-block;
     vertical-align: middle;
@@ -83,16 +88,14 @@ header.main .logo img {
     margin-right: 5px;
 }
 
-header.main .logos {
-	display: flex;
+@media (min-width: 960px) {
+	header.main .logo {
+		font-size: 1.7em;
+	}
+	header.main .logo img {
+    	width: 38px;
+	}
 }
-
-header.main .logos img {
-	display: flex;
-	max-height: 40px;
-	margin: 10px;
-}
-
 
 nav.main {
 	position: fixed;
@@ -101,39 +104,33 @@ nav.main {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background: radial-gradient(circle at 0% 0%, rgba(0, 67, 122, 0.99) 0%, rgba(0, 30, 80, 0.99) 100%);
 	transform: translateY(-100%);
 	transition: all 0.4s ease-in-out;
+	padding-top: 100px;
 }
 
 body.open nav.main {
 	transform: translateY(0);
 }
 
-nav.main .container {
-	position: relative;
-	top: 50%;
-	transform: translateY(-80%);
-	max-width: 100%;
-}
-
-nav.main .row {
-	display: flex;
-}
 
 nav.main .row .col {
-	width: 25%;
 	text-align: center;
-	padding-top: 150px;
-	margin: 0 50px;
+	margin: 20px;
+}
+
+@media (min-width: 960px) {
+	nav.main .row .col {
+		margin: 0 50px 50px;
+	}
 }
 
 nav.main a {
 	display: block;
 	color: #eee;
 	text-decoration: none;
-	font-size: 1.4em;
 	line-height: 2.5em;
 	transition: all 0.25s ease-in-out;
 }
@@ -145,14 +142,38 @@ nav.main a:hover {
 nav.main a:first-child {
 	color: #fff;
 	margin-bottom: 10px;
-	font-size: 2em;
 	line-height: 2em;
 	border-bottom: 1px solid rgba(255,255,255,0.5);
+	font-size: 1.5em;
 }
 
 nav.main a:first-child:hover {
 	color: #4CC7F4;
 }
+
+@media (min-width: 960px) {
+	nav.main .container {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100%;
+		max-width: 100%;
+	}
+	nav.main .row {
+		display: flex;
+	}
+	nav.main .row .col {
+		width: 25%;
+	}
+	nav.main a {
+		font-size: 1.4em;
+	}
+	nav.main a:first-child {
+		font-size: 2em;
+	}
+}
+
 
 header.main .menu-toggle {
 	margin-left: auto;
@@ -213,11 +234,17 @@ body.open .burger__3 {
 }
 
 .emotion {
-	height: 70vh;
 	min-height: 600px;
 	width: 100%;
 	position: relative;
 	overflow: hidden;
+}
+
+@media (min-width: 960px) {
+	.emotion {
+		height: 70vh;
+		min-height: 600px;
+	}
 }
 
 .emotion:before {
@@ -241,22 +268,23 @@ body.open .burger__3 {
 
 .emotion .bg:before {
 	content: "";
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 80vh;
+	height: 70vh;
+    min-height: 600px;
 	opacity: 1;
 	background-image: url("https://www.tenbrinke.com/files/object_manager/germany/Gross%20Umstadt/IE6958_VWSchuetz_GrossUmstadt/GrossUmstadt_VWAutohausSchuetz_MWTTrojan_16.jpg");
 	background-size: cover;
-	background-position: center center;
+	background-position: 20% center;
 	background-repeat: no-repeat;
 }
 
 .emotion .text {
 	position: absolute;
-	bottom: 50px;
-	left: 50px;
+	bottom: 20px;
+	left: 20px;
 	color: #fff;
 	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
 }
@@ -274,16 +302,34 @@ body.open .burger__3 {
 	margin: 0;
 }
 
-.intro .row {
-	display: flex;
+@media (min-width: 960px) {
+	.emotion .bg:before {
+		background-position: center center;
+	}
+	.emotion .text {
+		bottom: 50px;
+		left: 50px;
+	}
 }
 
 .intro .col {
-	width: calc(100%/3);
+	background: #000;
 	color: #fff;
 	position: relative;
-	height: 30vh;
+	height: 50vh;
+	min-height: 400px;
 	overflow: hidden;
+}
+
+@media (min-width: 960px) {
+	.intro .row {
+		display: flex;
+	}
+	.intro .col {
+		width: calc(100%/3);
+		height: 30vh;
+		min-height: 0;
+	}	
 }
 
 .intro .col:hover .bg {
@@ -324,8 +370,13 @@ body.open .burger__3 {
 	bottom: 0;
 	left: 0;
 	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
-	transform: translateY(calc(100% - 60px));
 	transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 960px) {
+	.intro .col .text {
+		transform: translateY(calc(100% - 60px));
+	}
 }
 
 .intro .col .text:before {
