@@ -116,7 +116,7 @@ nav.main {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background: radial-gradient(circle at 0% 0%, rgba(0, 67, 122, 0.98) 0%, rgba(0, 30, 80, 0.98) 100%);
+	background: radial-gradient(circle at 0% 0%, rgba(0, 67, 122, 0.99) 0%, rgba(0, 30, 80, 0.99) 100%);
 	transform: translateY(-100%);
 	transition: all 0.4s ease-in-out;
 }
