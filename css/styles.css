@@ -241,7 +241,7 @@ body.open .burger__3 {
 
 .emotion .text {
 	position: relative;
-	z-index: 5;
+	z-index: 1;
 }
 
 .emotion .bg {
