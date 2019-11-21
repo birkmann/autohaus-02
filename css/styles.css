@@ -333,7 +333,7 @@ body.open .burger__3 {
 	bottom: 0;
 	left: 0;
 	text-shadow: 0 2px 3px rgba(0,0,0,0.2);
-	transform: translateY(55%);
+	transform: translateY(calc(100% - 60px));
 	transition: all 0.3s ease-in-out;
 }
 
@@ -365,4 +365,20 @@ body.open .burger__3 {
 	position: relative;
 	z-index: 1;
 	padding: 20px;
+}
+
+.intro .col .text a.button {
+	background: #fff;
+	color: #000;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 50px;
+	padding: 8px 30px;
+	text-decoration: none;
+	display: inline-block;
+	transition: all 0.3s ease-in-out;
+}
+
+.intro .col .text a.button:hover {
+	background: #4CC7F4;
 }
