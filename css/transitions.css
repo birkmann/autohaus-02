@@ -91,11 +91,3 @@
 .m-scene.is-exiting .scene_element--noexiting {
 	animation-direction: alternate-reverse;
 }
-
-@media screen and (min-width: 768px) {
-
-	.m-scene .scene_element--fadeinright-wide {
-		animation-name: fadeInRight;
-	}
-
-}
