@@ -4,6 +4,22 @@ body {
 	color: #333;
 	background: #000;
 	overflow-x: hidden;
+	overflow-y: scroll;
+	position: relative;
+}
+
+body#home:before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 120vh;
+	opacity: 0.1;
+	background-image: url("https://images.pexels.com/photos/756861/pexels-photo-756861.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 @media (min-width: 1600px) {
@@ -47,7 +63,8 @@ header.main {
 	left: 0;
 	width: 100%;
 	padding: 20px;
-	background: #111;
+	background: #fff;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 
 header.main * {
@@ -62,7 +79,7 @@ header.main .container {
 header.main .logo {
 	text-decoration: none;
 	font-size: 1.7em;
-	color: #fff;
+	color: rgb(0, 30, 80);
 	display: inline-block;
 	padding: 12px 20px;
 	border-radius: 0 0 2px 2px;
@@ -90,13 +107,6 @@ header.main .logos img {
 	margin: 10px;
 }
 
-header.main .menu-toggle {
-	margin-left: auto;
-	color: #aaa;
-	line-height: 60px;
-	font-size: 1.2em;
-	cursor: pointer; 
-}
 
 nav.main {
 	position: fixed;
@@ -106,8 +116,7 @@ nav.main {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	background: #000;
-	background: rgba(20,20,20,0.96);
+	background: radial-gradient(circle at 0% 0%, rgba(0, 67, 122, 0.98) 0%, rgba(0, 30, 80, 0.98) 100%);
 	transform: translateY(-100%);
 	transition: all 0.35s ease-in-out;
 }
@@ -136,7 +145,7 @@ nav.main .row .col {
 
 nav.main a {
 	display: block;
-	color: #aaa;
+	color: #eee;
 	text-decoration: none;
 	font-size: 1.4em;
 	line-height: 2.5em;
@@ -148,13 +157,20 @@ nav.main a:hover {
 }
 
 nav.main a:first-child {
-	font-family: 'Georgia', serif;
-	color: #666;
-	font-style: italic;
+	color: #fff;
 	margin-bottom: 10px;
-	font-size: 2.2em;
+	font-size: 2em;
 	line-height: 2em;
-	border-bottom: 1px solid rgba(255,255,255,0.1);
+	font-weight: bold;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+header.main .menu-toggle {
+	margin-left: auto;
+	color: rgb(0, 30, 80);
+	line-height: 60px;
+	font-size: 1.2em;
+	cursor: pointer; 
 }
 
 .burger {
@@ -174,7 +190,7 @@ nav.main a:first-child {
 .burger__3 {
 	height: 3px;
 	width: 30px;
-	background: #666;
+	background: rgb(0, 30, 80);
 	content: "";
 	display: block;
 	position: relative;
@@ -203,10 +219,11 @@ body.open .burger__3 {
 }
 
 .emotion {
-	height: 80vh;
+	height: 70vh;
 	min-height: 600px;
 	width: 100%;
 	position: relative;
+	overflow: hidden;
 }
 
 .emotion:before {
@@ -219,17 +236,27 @@ body.open .burger__3 {
 	background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
 }
 
+.emotion .text {
+	position: relative;
+	z-index: 5;
+}
+
 .emotion .bg {
-	background-image: url("https://images.pexels.com/photos/2827755/pexels-photo-2827755.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+	transition: all 0.25s ease-in-out;
+}
+
+.emotion .bg:before {
+	content: "";
+	position: fixed;
 	top: 0;
-    width: 100%;
-    height: 80vh;
-    min-height: 500px;
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 100px black;
-    transition: opacity .5s ease-in-out;
+	left: 0;
+	width: 100%;
+	height: 80vh;
+	opacity: 1;
+	background-image: url("https://www.tenbrinke.com/files/object_manager/germany/Gross%20Umstadt/IE6958_VWSchuetz_GrossUmstadt/GrossUmstadt_VWAutohausSchuetz_MWTTrojan_16.jpg");
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
 }
 
 .emotion .text {
@@ -261,7 +288,7 @@ body.open .burger__3 {
 	width: calc(100%/3);
 	color: #fff;
 	position: relative;
-	height: 35vh;
+	height: 30vh;
 	overflow: hidden;
 }
 
@@ -284,15 +311,15 @@ body.open .burger__3 {
 }
 
 .intro .col:nth-child(1) .bg {
-	background-image: url("https://images.pexels.com/photos/2127039/pexels-photo-2127039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-image: url("https://s7g10.scene7.com/is/image/volkswagenag/GL5463_side_women?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTE5MjAmaGVpPTEwODAmYWxpZ249MC4wMCwwLjAwJmMxMTA=");
 }
 
 .intro .col:nth-child(2) .bg {
-	background-image: url("https://images.pexels.com/photos/1231643/pexels-photo-1231643.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+	background-image: url("https://s7g10.scene7.com/is/image/volkswagenag/VW2084_Range-VW-IQ.DRIVE-in-front-of-urban-setting_16-9_f-cc?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTk2MCZoZWk9NTQwJmFsaWduPTAuMDAsMC4wMCY3Yjkx");
 }
 
 .intro .col:nth-child(3) .bg {
-	background-image: url("https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+	background-image: url("https://s7g10.scene7.com/is/image/volkswagenag/PAR4479_Passat-Variant-with-family-at-open-trunk_3-2_f-cr?Zml0PWNyb3AsMSZmbXQ9d2VicCZxbHQ9Nzkmd2lkPTk2MCZoZWk9NTQwJmFsaWduPTAuODMsMC4wMCYzY2Iy");
 
 }
 
@@ -327,6 +354,8 @@ body.open .burger__3 {
 
 .intro .col .text p {
 	margin: 0;
+	font-size: 1.2em;
+	line-height: 1.6em;
 }
 
 .intro .col .text .inside {
