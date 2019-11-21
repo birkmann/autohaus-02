@@ -172,6 +172,7 @@ header.main .menu-toggle {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
+	transition: all 0.25s ease-in-out;
 }
 
 .burger__1,
@@ -193,6 +194,10 @@ header.main .menu-toggle {
 
 .burger__2 {
 	width: 80%;
+}
+
+body.open .burger {
+transform: rotate(90deg);
 }
 
 body.open .burger__1 {
