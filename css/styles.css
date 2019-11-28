@@ -454,6 +454,13 @@ body.open .burger__3 {
 
 .intro .col .text h2 {
 	margin: 0 0 10px;
+	font-size: 1.25em;
+}
+
+@media (min-width: 1200px) {
+	.intro .col .text h2 {
+		font-size: 1.5em;
+	}
 }
 
 .intro .col .text p {
