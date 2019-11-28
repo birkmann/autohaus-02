@@ -69,14 +69,13 @@ header.main .container {
 
 header.main .logo {
 	text-decoration: none;
-	font-size: 18px;
+	font-size: 13px;
 	color: rgb(0, 30, 80);
 	display: inline-block;
 	padding: 12px 0px;
 	border-radius: 0 0 2px 2px;
 	line-height: 35px;
 	font-weight: bold;
-	margin-right: 50px;
 }
 
 header.main .logo img {
@@ -86,6 +85,21 @@ header.main .logo img {
     vertical-align: middle;
     margin-top: -7px;
     margin-right: 5px;
+}
+
+@media (min-width: 320px) {
+	header.main .logo {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 470px) {
+	header.main .logo {
+		font-size: 1.5em;
+	}
+	header.main .logo img {
+    	width: 38px;
+	}
 }
 
 @media (min-width: 960px) {
@@ -176,13 +190,25 @@ nav.main a:first-child:hover {
 
 @media (min-width: 1600px) {
 	nav.main a:first-child {
-		font-size: 2em;
+		font-size: 1.75em;
 	}
 	nav.main a {
 		font-size: 1.5em;
 	}
 }
 
+header.main nav.header {
+	display: none;
+    margin-left: auto;
+    line-height: 60px;
+    margin-right: 50px;
+}
+
+header.main nav.header a {
+	text-decoration: none;
+	color: #666;
+	font-size: 1.1em;
+}
 
 header.main .menu-toggle {
 	margin-left: auto;
@@ -192,17 +218,37 @@ header.main .menu-toggle {
 	cursor: pointer; 
 }
 
+header.main .menu-toggle .text {
+	display: none;
+}
+
+@media (min-width: 470px) {
+	header.main .menu-toggle .text {
+		display: inline-block;
+	}
+}
+
+@media (min-width: 600px) {
+	header.main nav.header {
+		display: block;
+	}
+	header.main .menu-toggle {
+		margin-left: 0;
+	}
+}
+
 .burger {
-	margin-top: 10px;
+	margin-top: 7px;
 	margin-right: 5px;
 	height: 30px;
 	padding: 0px;
-	margin-left: auto;
+	margin-left: 8px;
 	cursor: pointer;
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
 	transition: all 0.25s ease-in-out;
+	transform-origin: center center;
 }
 
 .burger__1,
@@ -227,7 +273,7 @@ header.main .menu-toggle {
 }
 
 body.open .burger {
-transform: rotate(90deg);
+	transform: rotate(90deg) translateX(-4px) translateY(5px);
 }
 
 body.open .burger__1 {
@@ -435,4 +481,44 @@ body.open .burger__3 {
 
 .intro .col .text a.button:hover {
 	background: #4CC7F4;
+}
+
+.welcome {
+	text-align: center;
+	padding: 20px 0;
+}
+
+.welcome .text {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.welcome .text h1 {
+	color: rgb(0, 30, 80);
+	text-transform: uppercase;
+	font-size: 1.4em;
+	margin-bottom: 25px;
+}
+
+.welcome .text a.button {
+	color: rgb(0, 30, 80);
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 2px solid rgb(0, 30, 80);
+	font-size: 1.25em;
+	transition: color 0.15s ease-in-out;
+}
+
+.welcome .text a.button:hover {
+	color: #1b42cb;
+	border-bottom: 2px solid #1b42cb;
+}
+
+@media (min-width: 1000px) {
+	.welcome {
+		padding: 60px 0;
+	}
+	.welcome .text {
+		max-width: 66%;
+	}
 }
