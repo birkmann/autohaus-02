@@ -123,7 +123,7 @@ nav.main .row .col {
 
 @media (min-width: 960px) {
 	nav.main .row .col {
-		margin: 0 50px 50px;
+		margin: 0 2% 50px;
 	}
 }
 
@@ -132,7 +132,7 @@ nav.main a {
 	color: #eee;
 	text-decoration: none;
 	line-height: 2.5em;
-	transition: all 0.25s ease-in-out;
+	transition: color 0.25s ease-in-out;
 }
 
 nav.main a:hover {
@@ -166,11 +166,20 @@ nav.main a:first-child:hover {
 	nav.main .row .col {
 		width: 25%;
 	}
-	nav.main a {
-		font-size: 1.4em;
+	nav.main a:first-child {
+		font-size: 1.5em;
 	}
+	nav.main a {
+		font-size: 1.2em;
+	}
+}
+
+@media (min-width: 1600px) {
 	nav.main a:first-child {
 		font-size: 2em;
+	}
+	nav.main a {
+		font-size: 1.5em;
 	}
 }
 
@@ -327,7 +336,7 @@ body.open .burger__3 {
 	.intro .col {
 		width: calc(100%/3);
 		height: 30vh;
-		min-height: 0;
+		min-height: 250px;
 	}	
 }
 
@@ -378,6 +387,11 @@ body.open .burger__3 {
 	}
 }
 
+@media (min-width: 1400px) {
+	.intro .col .text {
+	}
+}
+
 .intro .col .text:before {
 	content: "";
 	position: absolute;
@@ -398,7 +412,6 @@ body.open .burger__3 {
 
 .intro .col .text p {
 	margin: 0;
-	font-size: 1.2em;
 	line-height: 1.6em;
 }
 
